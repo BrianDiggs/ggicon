@@ -25,10 +25,9 @@ icon.all <-
                                                              pch = 19, size = unit(.1, "npc"),
                                                              gp = gpar(col = "black", cex = 0.5), default.units = "npc",
                                                              vp="bl"),
-                                                  pointsGrob(x=seq(0.1, 0.9, length=6), y=seq(0.9, 0.1, length=6),
-                                                             pch=19, gp=gpar(col="black", cex=0.5), default.units="npc",
-                                                             size = unit(.1, "npc"),
-                                                             vp="tr"),
+                                                  local({x <- seq(0, 1, length=80)
+                                                        y <- dnorm(x, mean=0.5, sd=0.15)
+                                                        linesGrob(x, 0.05 + y / max(y) * 0.9, default="npc", vp="tr", gp=gpar(lwd=2))}),
                                                   rectGrob(c(0.1, 0.3, 0.5, 0.7, 0.9), width=0.21,
                                                            gp=gpar(fill=gray(seq(0, 1, length=5)), col=NA),
                                                            vp="tl"),
