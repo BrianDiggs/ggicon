@@ -30,7 +30,7 @@ icon.all <-
                                                              size = unit(.1, "npc"),
                                                              vp="tr"),
                                                   rectGrob(c(0.1, 0.3, 0.5, 0.7, 0.9), width=0.21,
-                                                           gp=gpar(fill=gray(seq(0, 1, length=5)), col=NA),
+                                                           gp=gpar(fill=c("#832424", "#C19191", "#FFFFFF", "#9C9CCB", "#3A3A98"), col=NA),
                                                            vp="tl"),
                                                   circleGrob(c(0.15, 0.3, 0.5, 0.75), c(0.15, 0.3, 0.5, 0.75),
                                                              r=(c(0.1, 0.2, 0.3, 0.4)/2.5), gp=gpar(fill="grey50", col=NA),
